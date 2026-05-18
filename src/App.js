@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
+
 function App() {
   
   //Creating state for add element
@@ -68,7 +69,7 @@ function App() {
           {/* Sample task by array */}
           {
             tasks.map((task,index)=>(
-              <div className="task-item" id={index}>
+              <div className="task-item" key={index}>
                 <input type="checkbox" onClick={()=>tick(index)} />
                 <span className={task.completed ? "task-text completed" : "task-text"}>{task.text}</span>
 
